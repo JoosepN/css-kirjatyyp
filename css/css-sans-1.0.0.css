@@ -390,11 +390,11 @@
   border-width: 14px 16px 14px 16px;
   border-color: #000000;
   border-style: solid;
-  /*-webkit-border-radius: 55% / 52%;
+  -webkit-border-radius: 55% / 52%;
   -moz-border-radius: 55% / 52%;
   -ms-border-radius: 55% / 52%;
   -o-border-radius: 55% / 52%;
-  border-radius: 55% / 52%;*/
+  border-radius: 55% / 52%;
 }
 .P {
   position: relative;
@@ -604,7 +604,7 @@
   position: relative;
   top: 12.5px;
   left: 30px;
-  width: 59px;
+  width: 59px
 }
 .V:before {
   -webkit-transform: skew(18deg, 0);
@@ -764,4 +764,9 @@
   width: 18px;
   height: 95px;
   background-color: #000000;
+}
+
+*:before {
+  border-color: red;
+  color: red;
 }
