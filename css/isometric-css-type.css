@@ -1,0 +1,1437 @@
+/*
+ * isometric-css-type
+ * (c) 2016 Joosep Noorväli
+ */
+
+.paragraph {
+    position: absolute;
+    transform: rotateX(45deg) rotateZ(45deg);
+    transform-style: preserve-3d;
+}
+.letter, .letter:after, .letter:before {
+    content: '';
+    float: left;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+}
+/* Top */
+.letter {
+    position: relative;
+	margin-top: 8em;
+    transform: translateZ(1em);
+    transform-style: preserve-3d;
+}
+/* Left */
+.letter:after {
+    transform: rotateX(-90deg) translateY(1em);
+    transform-origin: 100% 100%;
+}
+/* Right */
+.letter:before {
+    transform: rotateY(90deg) translateX(1em);
+    transform-origin: 100% 0;
+}
+.I {
+	margin-right: 1em;
+}
+.E, .F, .L, .Z, .Ž, .T {
+	margin-right: 3em;
+}
+.A, .B, .C, .D, .G, .H, .J, .K, .O, .P, .Q, .R, .S, .Š, .U, .Õ, .Ä, .Ö, .Ü {
+	margin-right: 4em;
+}
+.M, .N, .V, .W, .X, .Y {
+	margin-right: 5em;
+}
+
+/*
+#CDCDCD
+#808080
+#333333
+*/
+
+/*
+box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        2em 2em #CDCDCD,
+        3em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        5em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        5em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        2em 4em #CDCDCD,
+        3em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        5em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD,
+        4em 5em #CDCDCD,
+        5em 5em #CDCDCD;
+
+box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        3em 1.42em #808080,
+        4em 1.42em #808080,
+        -1em 2.84em #808080,
+        0em 2.84em #808080,
+        1em 2.84em #808080,
+        2em 2.84em #808080,
+        3em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        1em 4.26em #808080,
+        2em 4.26em #808080,
+        -3em 5.68em #808080,
+        -2em 5.68em #808080,
+        -1em 5.68em #808080,
+        0em 5.68em #808080,
+        1em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080,
+        -1em 7.1em #808080,
+        0em 7.1em #808080;
+
+box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        5.68em -3em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        2.84em 0em #333333,
+        4.26em -1em #333333,
+        5.68em -2em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em -1em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        2.84em 2em #333333,
+        4.26em 1em #333333,
+        5.68em 0em #333333,
+        7.1em -1em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333,
+        5.68em 1em #333333,
+        7.1em 0em #333333;
+*/
+
+.A {
+    box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.A:after {
+    box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.A:before {
+    box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+}
+.B {
+    box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.B:after {
+    box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.B:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.C {
+	box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.C:after {
+	box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.C:before {
+	box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.D {
+	box-shadow:
+		1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+		1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.D:after {
+	box-shadow:
+		0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+		-4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.D:before {
+	box-shadow:
+		1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+		1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.E {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.E:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.E:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.F {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD;
+}
+.F:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080;
+}
+.F:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+}
+.G {
+	box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+		4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+		3em 3em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.G:after {
+	box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+		3em 1.42em #808080,
+        -1em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+		0em 4.26em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.G:before {
+	box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+		5.68em -3em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+		4.26em 0em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.H {
+	box-shadow:
+        1em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.H:after {
+	box-shadow:
+        0em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.H:before {
+	box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+}
+.I {
+	box-shadow:
+        1em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD;
+}
+.I:after {
+	box-shadow:
+        0em 1.42em #808080,
+        -1em 2.84em #808080,
+        -2em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080;
+}
+.I:before {
+	box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+}
+.J {
+	box-shadow:
+		4em 1em #CDCDCD,
+        4em 2em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.J:after {
+	box-shadow:
+		3em 1.42em #808080,
+        2em 2.84em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.J:before {
+	box-shadow:
+		5.68em -3em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.K {
+	box-shadow:
+        1em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+		3em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+		3em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.K:after {
+	box-shadow:
+        0em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+		1em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        -3em 5.68em #808080,
+		-1em 5.68em #808080,
+        -4em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.K:before {
+	box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+		4.26em -1em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+		4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+}
+.L {
+	box-shadow:
+        1em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.L:after {
+	box-shadow:
+        0em 1.42em #808080,
+        -1em 2.84em #808080,
+        -2em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.L:before {
+	box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.M {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        2em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        5em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        5em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        5em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        5em 5em #CDCDCD;
+}
+.M:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        -1em 2.84em #808080,
+        0em 2.84em #808080,
+        2em 2.84em #808080,
+        3em 2.84em #808080,
+        -2em 4.26em #808080,
+        0em 4.26em #808080,
+        2em 4.26em #808080,
+        -3em 5.68em #808080,
+        1em 5.68em #808080,
+        -4em 7.1em #808080,
+        0em 7.1em #808080;
+}
+.M:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        7.1em -1em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+}
+.N {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        2em 2em #CDCDCD,
+        5em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        5em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+		5em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        5em 5em #CDCDCD;
+}
+.N:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        -1em 2.84em #808080,
+        0em 2.84em #808080,
+        3em 2.84em #808080,
+        -2em 4.26em #808080,
+        0em 4.26em #808080,
+        2em 4.26em #808080,
+        -3em 5.68em #808080,
+		0em 5.68em #808080,
+        1em 5.68em #808080,
+        -4em 7.1em #808080,
+        0em 7.1em #808080;
+}
+.N:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        2.84em 0em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+		7.1em -1em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+}
+.O {
+	box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.O:after {
+	box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.O:before {
+	box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.P {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+		4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD;
+}
+.P:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+		2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080;
+}
+.P:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+}
+.Q {
+	box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD,
+	    4em 6em #CDCDCD;
+}
+.Q:after {
+	box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080,
+		-2em 8.52em #808080;
+}
+.Q:before {
+	box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333,
+		5.68em 2em #333333;
+}
+.R {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+		4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        3em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.R:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+		2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        -3em 5.68em #808080,
+        -1em 5.68em #808080,
+        -4em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.R:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+}
+.S {
+	box-shadow:
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.S:after {
+	box-shadow:
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.S:before {
+	box-shadow:
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.Š {
+	box-shadow:
+		1.5em -1.5em #CDCDCD,
+        2.5em -0.5em #CDCDCD,
+        3.5em -1.5em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Š:after {
+	box-shadow:
+		3em -2.13em #808080,
+        3em -0.71em #808080,
+        5em -2.13em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Š:before {
+	box-shadow:
+		2.13em -3em #333333,
+        3.55em -3em #333333,
+        4.97em -5em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.Z {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        3em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Z:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        1em 2.84em #808080,
+        -1em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Z:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.Ž {
+	box-shadow:
+		1em -1.5em #CDCDCD,
+        2em -0.5em #CDCDCD,
+        3em -1.5em #CDCDCD,
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        3em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Ž:after {
+	box-shadow:
+		2.5em -2.13em #808080,
+        4.5em -2.13em #808080,
+        2.5em -0.71em #808080,
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        1em 2.84em #808080,
+        -1em 4.26em #808080,
+        -3em 5.68em #808080,
+        -4em 7.1em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Ž:before {
+	box-shadow:
+		1.42em -2.5em #333333,
+		2.84em -2.5em #333333,
+        4.26em -4.5em #333333,
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.T {
+	box-shadow:
+        1em 1em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        2em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        2em 4em #CDCDCD,
+        2em 5em #CDCDCD;
+}
+.T:after {
+	box-shadow:
+        0em 1.42em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        0em 2.84em #808080,
+        -1em 4.26em #808080,
+        -2em 5.68em #808080,
+        -3em 7.1em #808080;
+}
+.T:before {
+	box-shadow:
+        1.42em 0em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        2.84em 0em #333333,
+        2.84em 1em #333333,
+        2.84em 2em #333333,
+        2.84em 3em #333333;
+}
+.U {
+	box-shadow:
+        1em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.U:after {
+	box-shadow:
+        0em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.U:before {
+	box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.V {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        5em 2em #CDCDCD,
+        2em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        2em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.V:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        -1em 2.84em #808080,
+        3em 2.84em #808080,
+        -1em 4.26em #808080,
+        1em 4.26em #808080,
+        -2em 5.68em #808080,
+        0em 5.68em #808080,
+        -2em 7.1em #808080;
+}
+.V:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        7.1em -3em #333333,
+        2.84em 1em #333333,
+        5.68em -1em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+}
+.W {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        3em 2em #CDCDCD,
+        5em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        5em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        3em 4em #CDCDCD,
+        5em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.W:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        -1em 2.84em #808080,
+        1em 2.84em #808080,
+        3em 2.84em #808080,
+        -2em 4.26em #808080,
+        0em 4.26em #808080,
+        2em 4.26em #808080,
+        -3em 5.68em #808080,
+        -1em 5.68em #808080,
+        1em 5.68em #808080,
+        -3em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.W:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        4.26em -1em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        7.1em -1em #333333,
+        2.84em 3em #333333,
+        5.68em 1em #333333;
+}
+.Õ {
+	box-shadow:
+		1.5em -0.5em #CDCDCD,
+        2.5em -0.5em #CDCDCD,
+        3.5em -0.5em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Õ:after {
+	box-shadow:
+		2em -0.71em #808080,
+        3em -0.71em #808080,
+        4em -0.71em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Õ:before {
+	box-shadow:
+		2.13em -2em #333333,
+        3.55em -3em #333333,
+        4.97em -4em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.Ä {
+	box-shadow:
+		1.5em -0.5em #CDCDCD,
+        3.5em -0.5em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        2em 3em #CDCDCD,
+        3em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        4em 5em #CDCDCD;
+}
+.Ä:after {
+	box-shadow:
+		2em -0.71em #808080,
+        4em -0.71em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        -1em 4.26em #808080,
+        0em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        -1em 7.1em #808080;
+}
+.Ä:before {
+	box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        2.84em 1em #333333,
+        4.26em 0em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+}
+.Ö {
+	box-shadow:
+		1.5em -0.5em #CDCDCD,
+        3.5em -0.5em #CDCDCD,
+        2em 1em #CDCDCD,
+        3em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Ö:after {
+	box-shadow:
+		2em -0.71em #808080,
+        4em -0.71em #808080,
+        1em 1.42em #808080,
+        2em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Ö:before {
+	box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        2.84em -1em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.Ü {
+	box-shadow:
+		1.5em -0.5em #CDCDCD,
+        3.5em -0.5em #CDCDCD,
+        1em 1em #CDCDCD,
+        4em 1em #CDCDCD,
+        1em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        1em 3em #CDCDCD,
+        4em 3em #CDCDCD,
+        1em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        2em 5em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Ü:after {
+	box-shadow:
+		2em -0.71em #808080,
+        4em -0.71em #808080,
+        0em 1.42em #808080,
+        3em 1.42em #808080,
+        -1em 2.84em #808080,
+        2em 2.84em #808080,
+        -2em 4.26em #808080,
+        1em 4.26em #808080,
+        -3em 5.68em #808080,
+        0em 5.68em #808080,
+        -3em 7.1em #808080,
+        -2em 7.1em #808080;
+}
+.Ü:before {
+	box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        2.84em 3em #333333,
+        4.26em 2em #333333;
+}
+.X {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        2em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        3em 3em #CDCDCD,
+        2em 4em #CDCDCD,
+        4em 4em #CDCDCD,
+        1em 5em #CDCDCD,
+        5em 5em #CDCDCD;
+}
+.X:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        0em 2.84em #808080,
+        2em 2.84em #808080,
+        0em 4.26em #808080,
+        -2em 5.68em #808080,
+        0em 5.68em #808080,
+        -4em 7.1em #808080,
+        0em 7.1em #808080;
+}
+.X:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+}
+.Y {
+	box-shadow:
+        1em 1em #CDCDCD,
+        5em 1em #CDCDCD,
+        2em 2em #CDCDCD,
+        4em 2em #CDCDCD,
+        3em 3em #CDCDCD,
+        3em 4em #CDCDCD,
+        3em 5em #CDCDCD;
+}
+.Y:after {
+	box-shadow:
+        0em 1.42em #808080,
+        4em 1.42em #808080,
+        0em 2.84em #808080,
+        2em 2.84em #808080,
+        0em 4.26em #808080,
+        -1em 5.68em #808080,
+        -2em 7.1em #808080;
+}
+.Y:before {
+	box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333;
+}
