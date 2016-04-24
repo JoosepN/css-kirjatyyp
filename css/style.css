@@ -1,3 +1,2216 @@
+/*
+#E3E3E3
+#333333
+#333333
+*/
+
+html {
+	height: 100%;
+}
 body {
-    margin: 100px 200px 0 200px;
+    margin: 0;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-family: 'Silkscreen', sans-serif;
+}
+a {
+	margin: 0;
+	padding: 0;
+	color: black;
+	display: inline;
+	text-decoration: inherit;
+}
+ul {
+	position: absolute;
+	top: 50%;
+	margin-left: 90px;
+	margin-top: -100px;
+	width: 250px;
+	cursor: normal;
+}
+@media (max-width: 766px) {
+    ul {
+        margin-left: -167px;
+	    margin-top: 175px;
+    }
+    li {
+		background: white;
+	}
+	body {
+		overflow: auto;
+	}
+}
+li {
+	padding-bottom: 5px;
+}
+.isometry {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: rotateX(45deg) rotateZ(45deg);
+}
+.letter {
+	transform: translateX(-4.7em) translateY(-11.7em);
+}
+.nav, details {
+	display: inline-block;
+}
+.nav {
+	position: relative;
+	font-size: 1em;
+	display: inline;
+	width: auto;
+	text-decoration: underline;
+}
+.heading {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	margin-left: -90px;
+	width: 180px;
+	font-size: 2em;
+}
+.downloadlink {
+	text-decoration: underline;
+}
+.download {
+	text-align: left;
+	position: absolute;
+	left: 50%;
+	transform: skewY(-35.5deg);
+	letter-spacing: -0.1em;
+	top: 50%;
+	margin-top: -60px;
+	margin-left: -100px;
+}
+li {
+	list-style-type: square;
+	transform: skewY(-35.3deg);
+}
+details {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.howto {
+	text-align: left;
+	position: absolute;
+	left: 50%;
+	transform: skewY(35.3deg);
+	letter-spacing: -0.1em;
+	top: 50%;
+	margin-top: -60px;
+	margin-left: 14px;
+}
+details summary::-webkit-details-marker { display:none; }
+.reference {
+	position: absolute;
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	top: 50%;
+	margin-top: -185px;
+	left: 20px;
+	text-align: right;
+	width: 370px;
+}
+.pedestal {
+	box-sizing: border-box;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -5em;
+	margin-left: -5em;
+	height: 10em;
+	width: 10em;
+	border: 1px solid black;
+	background: #FFFFFF;
+	z-index: -1;
+}
+.pedestall, .pedestalr {
+	position: absolute;
+	border: 1px solid black;
+	background: #FFFFFF;
+	left: 50%;
+	top: 50%;
+	width: 111px;
+	height: 50%;
+	margin-top: 39px;
+	z-index: -2;
+}
+.pedestall {
+	margin-left: -113px;
+	width: 112px;
+	transform: skewY(35.3deg);
+}
+.pedestalr {
+	transform: skewY(-35.3deg);
+}
+.cycle {
+	margin-right: 5em;
+    animation: cycle 32s infinite;
+}
+.cycle:after {
+	animation: cycleafter 32s infinite;
+}
+.cycle:before {
+	animation: cyclebefore 32s infinite;
+}
+
+@keyframes cycle {
+	0.000% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	2.500% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	3.125% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	5.625% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	6.250% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	8.750% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	9.375% {box-shadow:
+		1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+		1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	11.875% {box-shadow:
+		1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+		1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	12.500% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	15.000% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	15.625% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+	}
+	18.125% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	18.750% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+		4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	21.250% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+		4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	21.875% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	24.375% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	25.000% {box-shadow:
+        1em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+		transform: translateX(-2.2em) translateY(-11.7em);
+	}
+	27.500% {box-shadow:
+        1em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+		transform: translateX(-2.2em) translateY(-11.7em);
+	}
+	28.125% {box-shadow:
+		4em 1em #E3E3E3,
+        4em 2em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	30.625% {box-shadow:
+		4em 1em #E3E3E3,
+        4em 2em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	31.250% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		3em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		3em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	33.750% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		3em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		3em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	34.375% {box-shadow:
+        1em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	36.875% {box-shadow:
+        1em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	37.500% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        5em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	40.000% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        5em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+	}
+	40.625% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		5em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+	}
+	43.125% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+		5em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	43.750% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	46.250% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	46.875% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+	}
+	49.375% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3;
+	}
+	50.000% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3,
+	    4em 6em #E3E3E3;
+	}
+	52.500% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3,
+	    4em 6em #E3E3E3;
+	}
+	53.125% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        3em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	55.625% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+		4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        3em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	56.250% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	58.750% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	59.375% {box-shadow:
+		1.5em -1.5em #E3E3E3,
+        2.5em -0.5em #E3E3E3,
+        3.5em -1.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	61.875% {box-shadow:
+		1.5em -1.5em #E3E3E3,
+        2.5em -0.5em #E3E3E3,
+        3.5em -1.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	62.500% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        3em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	65.000% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        3em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	65.625% {box-shadow:
+		1em -1.5em #E3E3E3,
+        2em -0.5em #E3E3E3,
+        3em -1.5em #E3E3E3,
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        3em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	68.125% {box-shadow:
+		1em -1.5em #E3E3E3,
+        2em -0.5em #E3E3E3,
+        3em -1.5em #E3E3E3,
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        3em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	68.750% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        2em 5em #E3E3E3;
+	}
+	71.250% {box-shadow:
+        1em 1em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        2em 5em #E3E3E3;
+		transform: translateX(-3.2em) translateY(-11.7em);
+	}
+	71.875% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	74.375% {box-shadow:
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	75.000% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	77.500% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        2em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	78.125% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        3em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        3em 4em #E3E3E3,
+        5em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	80.625% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        3em 2em #E3E3E3,
+        5em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        5em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        3em 4em #E3E3E3,
+        5em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	81.250% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        2.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	83.750% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        2.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	84.375% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	86.875% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+	}
+	87.500% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	90.000% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	90.625% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	93.125% {box-shadow:
+		1.5em -0.5em #E3E3E3,
+        3.5em -0.5em #E3E3E3,
+        1em 1em #E3E3E3,
+        4em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        2em 5em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+	93.750% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        3em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	96.250% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        3em 3em #E3E3E3,
+        2em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        5em 5em #E3E3E3;
+	}
+	96.875% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        3em 3em #E3E3E3,
+        3em 4em #E3E3E3,
+        3em 5em #E3E3E3;
+	}
+	99.375% {box-shadow:
+        1em 1em #E3E3E3,
+        5em 1em #E3E3E3,
+        2em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        3em 3em #E3E3E3,
+        3em 4em #E3E3E3,
+        3em 5em #E3E3E3;
+		transform: translateX(-4.2em) translateY(-11.7em);
+	}
+	100.000% {box-shadow:
+        2em 1em #E3E3E3,
+        3em 1em #E3E3E3,
+        1em 2em #E3E3E3,
+        4em 2em #E3E3E3,
+        1em 3em #E3E3E3,
+        2em 3em #E3E3E3,
+        3em 3em #E3E3E3,
+        4em 3em #E3E3E3,
+        1em 4em #E3E3E3,
+        4em 4em #E3E3E3,
+        1em 5em #E3E3E3,
+        4em 5em #E3E3E3;
+		transform: translateX(-3.7em) translateY(-11.7em);
+	}
+}
+@keyframes cycleafter {
+	0.000% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	2.500% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	3.125% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        2em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	5.625% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        2em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	6.250% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        2em 2.84em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	8.750% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        2em 2.84em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	9.375% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        0em 5.68em #888888,
+		-4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	11.875% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        0em 5.68em #888888,
+		-4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	12.500% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	15.000% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	15.625% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888;
+	}
+	18.125% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888;
+	}
+	18.750% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		3em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+		0em 4.26em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	21.250% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		3em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+		0em 4.26em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	21.875% {box-shadow:
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	24.375% {box-shadow:
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	25.000% {box-shadow:
+        -4em 7.1em #888888;
+	}
+	27.500% {box-shadow:
+        -4em 7.1em #888888;
+	}
+	28.125% {box-shadow:
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	30.625% {box-shadow:
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	31.250% {box-shadow:
+        3em 1.42em #888888,
+		1em 2.84em #888888,
+        -1em 4.26em #888888,
+		-1em 5.68em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	33.750% {box-shadow:
+        3em 1.42em #888888,
+		1em 2.84em #888888,
+        -1em 4.26em #888888,
+		-1em 5.68em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	34.375% {box-shadow:
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	36.875% {box-shadow:
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	37.500% {box-shadow:
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	40.000% {box-shadow:
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	40.625% {box-shadow:
+        0em 2.84em #888888,
+        0em 4.26em #888888,
+		0em 5.68em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	43.125% {box-shadow:
+        0em 2.84em #888888,
+        0em 4.26em #888888,
+		0em 5.68em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	43.750% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	46.250% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	46.875% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		2em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888;
+	}
+	49.375% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		2em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888;
+	}
+	50.000% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888,
+		-2em 8.52em #888888;
+	}
+	52.500% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888,
+		-2em 8.52em #888888;
+	}
+	53.125% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		2em 2.84em #888888,
+        -1em 4.26em #888888,
+        -1em 5.68em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	55.625% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+		2em 2.84em #888888,
+        -1em 4.26em #888888,
+        -1em 5.68em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	56.250% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        3em 1.42em #888888,
+        -1em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	58.750% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        3em 1.42em #888888,
+        -1em 2.84em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(0em);
+	}
+	59.375% {box-shadow:
+		0em 2.13em #888888,
+        0em 3.56em #888888,
+        2em 2.13em #888888,
+        -2em 5.67em #888888,
+        -1em 5.67em #888888,
+        0em 5.67em #888888,
+        -4em 7.1em #888888,
+        -4em 8.51em #888888,
+        -3em 8.51em #888888,
+        -3em 9.93em #888888,
+        -7em 11.36em #888888,
+        -6em 11.36em #888888,
+        -5em 11.36em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(-3em);
+	}
+	61.875% {box-shadow:
+		0em 2.13em #888888,
+        0em 3.56em #888888,
+        2em 2.13em #888888,
+        -2em 5.67em #888888,
+        -1em 5.67em #888888,
+        0em 5.67em #888888,
+        -4em 7.1em #888888,
+        -4em 8.51em #888888,
+        -3em 8.51em #888888,
+        -3em 9.93em #888888,
+        -7em 11.36em #888888,
+        -6em 11.36em #888888,
+        -5em 11.36em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(-3em);
+	}
+	62.500% {box-shadow:
+        0em 1.42em #888888,
+        1em 1.42em #888888,
+        1em 2.84em #888888,
+        -1em 4.26em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(0em);
+	}
+	65.000% {box-shadow:
+        0em 1.42em #888888,
+        1em 1.42em #888888,
+        1em 2.84em #888888,
+        -1em 4.26em #888888,
+        -4em 7.1em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(0em);
+	}
+	65.625% {box-shadow:
+		-0.5em 2.13em #888888,
+        1.5em 2.13em #888888,
+        -0.5em 3.53em #888888,
+        -3em 5.67em #888888,
+        -2em 5.67em #888888,
+        -2em 7.1em #888888,
+        -4em 8.51em #888888,
+        -7em 11.36em #888888,
+        -6em 11.36em #888888,
+        -5em 11.36em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(-3em);
+	}
+	68.125% {box-shadow:
+		-0.5em 2.13em #888888,
+        1.5em 2.13em #888888,
+        -0.5em 3.53em #888888,
+        -3em 5.67em #888888,
+        -2em 5.67em #888888,
+        -2em 7.1em #888888,
+        -4em 8.51em #888888,
+        -7em 11.36em #888888,
+        -6em 11.36em #888888,
+        -5em 11.36em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(-3em);
+	}
+	68.750% {box-shadow:
+        0em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 7.1em #888888;
+		transform: rotateX(-90deg) translateY(1em) translateZ(0em);
+	}
+	71.250% {box-shadow:
+        0em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 7.1em #888888;
+	}
+	71.875% {box-shadow:
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	74.375% {box-shadow:
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	75.000% {box-shadow:
+        -1em 2.84em #888888,
+        3em 2.84em #888888,
+        -2em 5.68em #888888,
+        0em 5.68em #888888,
+        -2em 7.1em #888888;
+	}
+	77.500% {box-shadow:
+        -1em 2.84em #888888,
+        3em 2.84em #888888,
+        -2em 5.68em #888888,
+        0em 5.68em #888888,
+        -2em 7.1em #888888;
+	}
+	78.125% {box-shadow:
+        -3em 5.68em #888888,
+        -1em 5.68em #888888,
+        1em 5.68em #888888,
+        -3em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	80.625% {box-shadow:
+        -3em 5.68em #888888,
+        -1em 5.68em #888888,
+        1em 5.68em #888888,
+        -3em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	81.250% {box-shadow:
+		2em -0.71em #888888,
+        3em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	83.750% {box-shadow:
+		2em -0.71em #888888,
+        3em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	84.375% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	86.875% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+	87.500% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	90.000% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	90.625% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	93.125% {box-shadow:
+		2em -0.71em #888888,
+        4em -0.71em #888888,
+        -3em 5.68em #888888,
+        0em 5.68em #888888,
+        -3em 7.1em #888888,
+        -2em 7.1em #888888;
+	}
+	93.750% {box-shadow:
+        0em 1.42em #888888,
+        4em 1.42em #888888,
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        0em 4.26em #888888,
+        -2em 5.68em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	96.250% {box-shadow:
+        0em 1.42em #888888,
+        4em 1.42em #888888,
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        0em 4.26em #888888,
+        -2em 5.68em #888888,
+        0em 5.68em #888888,
+        -4em 7.1em #888888,
+        0em 7.1em #888888;
+	}
+	96.875% {box-shadow:
+        0em 1.42em #888888,
+        4em 1.42em #888888,
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        -2em 7.1em #888888;
+	}
+	99.375% {box-shadow:
+        0em 1.42em #888888,
+        4em 1.42em #888888,
+        0em 2.84em #888888,
+        2em 2.84em #888888,
+        -2em 7.1em #888888;
+	}
+	100.000% {box-shadow:
+        1em 1.42em #888888,
+        2em 1.42em #888888,
+        -1em 4.26em #888888,
+        0em 4.26em #888888,
+        -4em 7.1em #888888,
+        -1em 7.1em #888888;
+	}
+}
+@keyframes cyclebefore {
+	0.000% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	2.500% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	3.125% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	5.625% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	6.250% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	8.750% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	9.375% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	11.875% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	12.500% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+	}
+	15.000% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+	}
+	15.625% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	18.125% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	18.750% {box-shadow:
+		5.68em -3em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	21.250% {box-shadow:
+		5.68em -3em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	21.875% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	24.375% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	25.000% {box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	27.500% {box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	28.125% {box-shadow:
+		5.68em -3em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	30.625% {box-shadow:
+		5.68em -3em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	31.250% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+		4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+		4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	33.750% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+		4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+		4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	34.375% {box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+	}
+	36.875% {box-shadow:
+        1.42em 0em #333333,
+        1.42em 1em #333333,
+        1.42em 2em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+	}
+	37.500% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        7.1em -1em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	40.000% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        7.1em -1em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	40.625% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+		7.1em -1em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	43.125% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+		7.1em -1em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	43.750% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	46.250% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	46.875% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	49.375% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        1.42em 4em #333333;
+	}
+	50.000% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333,
+		5.68em 2em #333333;
+	}
+	52.500% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333,
+		5.68em 2em #333333;
+	}
+	53.125% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	55.625% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+		5.68em -2em #333333,
+        4.26em 0em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	56.250% {box-shadow:
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	58.750% {box-shadow:
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        4.26em 0em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(0em);
+	}
+	59.375% {box-shadow:
+		2.13em 0em #333333,
+        3.55em 0em #333333,
+        4.97em -2em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        4.26em 3em #333333,
+        5.68em 3em #333333,
+        4.26em 5em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(-3em);
+	}
+	61.875% {box-shadow:
+		2.13em 0em #333333,
+        3.55em 0em #333333,
+        4.97em -2em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        4.26em 3em #333333,
+        5.68em 3em #333333,
+        4.26em 5em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(-3em);
+	}
+	62.500% {box-shadow:
+        4.26em -2em #333333,
+        4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(0em);
+	}
+	65.000% {box-shadow:
+        4.26em -2em #333333,
+        4.26em -1em #333333,
+        2.84em 1em #333333,
+        1.42em 3em #333333,
+        4.26em 2em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(0em);
+	}
+	65.625% {box-shadow:
+		1.42em 0.5em #333333,
+		2.84em 0.5em #333333,
+        4.26em -1.5em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333,
+        2.84em 4em #333333,
+        1.42em 6em #333333,
+        4.26em 5em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(-3em);
+	}
+	68.125% {box-shadow:
+		1.42em 0.5em #333333,
+		2.84em 0.5em #333333,
+        4.26em -1.5em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333,
+        2.84em 4em #333333,
+        1.42em 6em #333333,
+        4.26em 5em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(-3em);
+	}
+	68.750% {box-shadow:
+        4.26em -2em #333333,
+        2.84em 0em #333333,
+        2.84em 1em #333333,
+        2.84em 2em #333333,
+        2.84em 3em #333333;
+		transform: rotateY(90deg) translateX(1em) translateY(0em);
+	}
+	71.250% {box-shadow:
+        4.26em -2em #333333,
+        2.84em 0em #333333,
+        2.84em 1em #333333,
+        2.84em 2em #333333,
+        2.84em 3em #333333;
+	}
+	71.875% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	74.375% {box-shadow:
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	75.000% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        7.1em -3em #333333,
+        2.84em 1em #333333,
+        5.68em -1em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	77.500% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        7.1em -3em #333333,
+        2.84em 1em #333333,
+        5.68em -1em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	78.125% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        4.26em -1em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        7.1em -1em #333333,
+        2.84em 3em #333333,
+        5.68em 1em #333333;
+	}
+	80.625% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        1.42em 1em #333333,
+        4.26em -1em #333333,
+        7.1em -3em #333333,
+        1.42em 2em #333333,
+        4.26em 0em #333333,
+        7.1em -2em #333333,
+        1.42em 3em #333333,
+        4.26em 1em #333333,
+        7.1em -1em #333333,
+        2.84em 3em #333333,
+        5.68em 1em #333333;
+	}
+	81.250% {box-shadow:
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	83.750% {box-shadow:
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	84.375% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	86.875% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
+	87.500% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	90.000% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	90.625% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	93.125% {box-shadow:
+		2.13em -2em #333333,
+        4.97em -4em #333333,
+        1.42em 0em #333333,
+        5.68em -3em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        1.42em 2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        4.26em 2em #333333;
+	}
+	93.750% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	96.250% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        2.84em 2em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        7.1em 0em #333333;
+	}
+	96.875% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333;
+	}
+	99.375% {box-shadow:
+        1.42em 0em #333333,
+        7.1em -4em #333333,
+        2.84em 0em #333333,
+        5.68em -2em #333333,
+        4.26em 0em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333;
+	}
+	100.000% {box-shadow:
+        4.26em -2em #333333,
+        1.42em 1em #333333,
+        5.68em -2em #333333,
+        5.68em -1em #333333,
+        1.42em 3em #333333,
+        5.68em 0em #333333,
+        1.42em 4em #333333,
+        5.68em 1em #333333;
+	}
 }

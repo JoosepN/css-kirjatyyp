@@ -1,12 +1,14 @@
-/*
+/*!
  * isometric-css-type
  * (c) 2016 Joosep Noorväli
  */
 
-.paragraph {
-    position: absolute;
+.isometry {
+    position: relative;
     transform: rotateX(45deg) rotateZ(45deg);
     transform-style: preserve-3d;
+	height: 0;
+	width: 0;
 }
 .letter, .letter:after, .letter:before {
     content: '';
@@ -14,31 +16,38 @@
     position: absolute;
     height: 1em;
     width: 1em;
+	z-index: 100;
 }
-/* Top */
 .letter {
     position: relative;
 	margin-top: 8em;
     transform: translateZ(1em);
     transform-style: preserve-3d;
 }
-/* Left */
 .letter:after {
     transform: rotateX(-90deg) translateY(1em);
     transform-origin: 100% 100%;
 }
-/* Right */
 .letter:before {
     transform: rotateY(90deg) translateX(1em);
     transform-origin: 100% 0;
 }
+.SH:after, .ZH:after {
+	transform: rotateX(-90deg) translateY(1em) translateZ(-3em);
+}
+.SH:before, .ZH:before {
+	transform: rotateY(90deg) translateX(1em) translateY(-3em);
+}
 .I {
 	margin-right: 1em;
 }
-.E, .F, .L, .Z, .Ž, .T {
+.SPACE {
+	margin-right: 2em;
+}
+.E, .F, .L, .Z, .ZH, .T {
 	margin-right: 3em;
 }
-.A, .B, .C, .D, .G, .H, .J, .K, .O, .P, .Q, .R, .S, .Š, .U, .Õ, .Ä, .Ö, .Ü {
+.A, .B, .C, .D, .G, .H, .J, .K, .O, .P, .Q, .R, .S, .SH, .U, .OL, .AD, .OD, .UD {
 	margin-right: 4em;
 }
 .M, .N, .V, .W, .X, .Y {
@@ -53,7 +62,7 @@
 
 /*
 box-shadow:
-        1em 1em #CDCDCD,
+        1em 1em z,
         2em 1em #CDCDCD,
         3em 1em #CDCDCD,
         4em 1em #CDCDCD,
@@ -133,7 +142,6 @@ box-shadow:
         5.68em 1em #333333,
         7.1em 0em #333333;
 */
-
 .A {
     box-shadow:
         2em 1em #CDCDCD,
@@ -153,26 +161,16 @@ box-shadow:
     box-shadow:
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        1em 4.26em #808080,
-        -3em 5.68em #808080,
-        0em 5.68em #808080,
         -4em 7.1em #808080,
         -1em 7.1em #808080;
 }
 .A:before {
     box-shadow:
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
-        4.26em 0em #333333,
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
@@ -197,15 +195,11 @@ box-shadow:
 }
 .B:after {
     box-shadow:
-        0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
         2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        -3em 5.68em #808080,
         0em 5.68em #808080,
         -4em 7.1em #808080,
         -3em 7.1em #808080,
@@ -213,18 +207,12 @@ box-shadow:
 }
 .B:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .C {
@@ -243,9 +231,7 @@ box-shadow:
 	box-shadow:
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
         2em 2.84em #808080,
-        -2em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
@@ -253,14 +239,12 @@ box-shadow:
 }
 .C:before {
 	box-shadow:
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
         1.42em 2em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .D {
@@ -280,14 +264,8 @@ box-shadow:
 }
 .D:after {
 	box-shadow:
-		0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
-        -3em 5.68em #808080,
         0em 5.68em #808080,
 		-4em 7.1em #808080,
         -3em 7.1em #808080,
@@ -295,8 +273,6 @@ box-shadow:
 }
 .D:before {
 	box-shadow:
-		1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
@@ -304,8 +280,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-		1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .E {
@@ -324,30 +298,20 @@ box-shadow:
 }
 .E:after {
 	box-shadow:
-        0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
 }
 .E:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         1.42em 3em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .F {
@@ -364,24 +328,16 @@ box-shadow:
 }
 .F:after {
 	box-shadow:
-        0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080;
 }
 .F:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         1.42em 3em #333333,
         1.42em 4em #333333;
@@ -405,9 +361,6 @@ box-shadow:
         1em 1.42em #808080,
         2em 1.42em #808080,
 		3em 1.42em #808080,
-        -1em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
 		0em 4.26em #808080,
@@ -416,16 +369,12 @@ box-shadow:
 }
 .G:before {
 	box-shadow:
-        2.84em -1em #333333,
-        4.26em -2em #333333,
 		5.68em -3em #333333,
         1.42em 1em #333333,
         1.42em 2em #333333,
         5.68em -1em #333333,
         1.42em 3em #333333,
-		4.26em 0em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .H {
@@ -445,16 +394,8 @@ box-shadow:
 }
 .H:after {
 	box-shadow:
-        0em 1.42em #808080,
-        3em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        1em 4.26em #808080,
-        -3em 5.68em #808080,
-        0em 5.68em #808080,
         -4em 7.1em #808080,
         -1em 7.1em #808080;
 }
@@ -464,9 +405,6 @@ box-shadow:
         5.68em -3em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
-        4.26em 0em #333333,
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
@@ -483,10 +421,6 @@ box-shadow:
 }
 .I:after {
 	box-shadow:
-        0em 1.42em #808080,
-        -1em 2.84em #808080,
-        -2em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080;
 }
 .I:before {
@@ -509,9 +443,6 @@ box-shadow:
 }
 .J:after {
 	box-shadow:
-		3em 1.42em #808080,
-        2em 2.84em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
@@ -524,7 +455,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .K {
@@ -542,13 +472,9 @@ box-shadow:
 }
 .K:after {
 	box-shadow:
-        0em 1.42em #808080,
         3em 1.42em #808080,
-        -1em 2.84em #808080,
 		1em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
-        -3em 5.68em #808080,
 		-1em 5.68em #808080,
         -4em 7.1em #808080,
         -1em 7.1em #808080;
@@ -559,7 +485,6 @@ box-shadow:
         5.68em -3em #333333,
         1.42em 1em #333333,
 		4.26em -1em #333333,
-        1.42em 2em #333333,
         2.84em 1em #333333,
         1.42em 3em #333333,
 		4.26em 1em #333333,
@@ -578,10 +503,6 @@ box-shadow:
 }
 .L:after {
 	box-shadow:
-        0em 1.42em #808080,
-        -1em 2.84em #808080,
-        -2em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
@@ -592,8 +513,6 @@ box-shadow:
         1.42em 1em #333333,
         1.42em 2em #333333,
         1.42em 3em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .M {
@@ -614,17 +533,9 @@ box-shadow:
 }
 .M:after {
 	box-shadow:
-        0em 1.42em #808080,
-        4em 1.42em #808080,
-        -1em 2.84em #808080,
         0em 2.84em #808080,
         2em 2.84em #808080,
-        3em 2.84em #808080,
-        -2em 4.26em #808080,
         0em 4.26em #808080,
-        2em 4.26em #808080,
-        -3em 5.68em #808080,
-        1em 5.68em #808080,
         -4em 7.1em #808080,
         0em 7.1em #808080;
 }
@@ -632,9 +543,7 @@ box-shadow:
 	box-shadow:
         1.42em 0em #333333,
         7.1em -4em #333333,
-        1.42em 1em #333333,
         2.84em 0em #333333,
-        5.68em -2em #333333,
         7.1em -3em #333333,
         1.42em 2em #333333,
         4.26em 0em #333333,
@@ -662,17 +571,9 @@ box-shadow:
 }
 .N:after {
 	box-shadow:
-        0em 1.42em #808080,
-        4em 1.42em #808080,
-        -1em 2.84em #808080,
         0em 2.84em #808080,
-        3em 2.84em #808080,
-        -2em 4.26em #808080,
         0em 4.26em #808080,
-        2em 4.26em #808080,
-        -3em 5.68em #808080,
 		0em 5.68em #808080,
-        1em 5.68em #808080,
         -4em 7.1em #808080,
         0em 7.1em #808080;
 }
@@ -680,7 +581,6 @@ box-shadow:
 	box-shadow:
         1.42em 0em #333333,
         7.1em -4em #333333,
-        1.42em 1em #333333,
         2.84em 0em #333333,
         7.1em -3em #333333,
         1.42em 2em #333333,
@@ -688,7 +588,6 @@ box-shadow:
         7.1em -2em #333333,
         1.42em 3em #333333,
 		7.1em -1em #333333,
-        5.68em 0em #333333,
         1.42em 4em #333333,
         7.1em 0em #333333;
 }
@@ -709,10 +608,6 @@ box-shadow:
 	box-shadow:
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
@@ -720,7 +615,6 @@ box-shadow:
 }
 .O:before {
 	box-shadow:
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
@@ -728,7 +622,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .P {
@@ -746,26 +639,18 @@ box-shadow:
 }
 .P:after {
 	box-shadow:
-        0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
 		2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080;
 }
 .P:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
 		5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         1.42em 3em #333333,
         1.42em 4em #333333;
@@ -788,10 +673,6 @@ box-shadow:
 	box-shadow:
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
@@ -800,7 +681,6 @@ box-shadow:
 }
 .Q:before {
 	box-shadow:
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
@@ -808,7 +688,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333,
 		5.68em 2em #333333;
 }
@@ -829,28 +708,19 @@ box-shadow:
 }
 .R:after {
 	box-shadow:
-        0em 1.42em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
 		2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
-        0em 4.26em #808080,
-        -3em 5.68em #808080,
         -1em 5.68em #808080,
         -4em 7.1em #808080,
         -1em 7.1em #808080;
 }
 .R:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
 		5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         1.42em 3em #333333,
         4.26em 1em #333333,
@@ -885,18 +755,13 @@ box-shadow:
 }
 .S:before {
 	box-shadow:
-        2.84em -1em #333333,
-        4.26em -2em #333333,
         5.68em -3em #333333,
         1.42em 1em #333333,
-        2.84em 1em #333333,
         4.26em 0em #333333,
         5.68em 0em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
-.Š {
+.SH {
 	box-shadow:
 		1.5em -1.5em #CDCDCD,
         2.5em -0.5em #CDCDCD,
@@ -912,37 +777,32 @@ box-shadow:
         2em 5em #CDCDCD,
         3em 5em #CDCDCD;
 }
-.Š:after {
+.SH:after {
 	box-shadow:
-		3em -2.13em #808080,
-        3em -0.71em #808080,
-        5em -2.13em #808080,
-        1em 1.42em #808080,
-        2em 1.42em #808080,
-        3em 1.42em #808080,
-        -1em 2.84em #808080,
-        -1em 4.26em #808080,
-        0em 4.26em #808080,
-        0em 5.68em #808080,
+		0em 2.13em #808080,
+        0em 3.56em #808080,
+        2em 2.13em #808080,
+        -2em 5.67em #808080,
+        -1em 5.67em #808080,
+        0em 5.67em #808080,
         -4em 7.1em #808080,
-        -3em 7.1em #808080,
-        -2em 7.1em #808080;
+        -4em 8.51em #808080,
+        -3em 8.51em #808080,
+        -3em 9.93em #808080,
+        -7em 11.36em #808080,
+        -6em 11.36em #808080,
+        -5em 11.36em #808080;
 }
-.Š:before {
+.SH:before {
 	box-shadow:
-		2.13em -3em #333333,
-        3.55em -3em #333333,
-        4.97em -5em #333333,
-        2.84em -1em #333333,
-        4.26em -2em #333333,
-        5.68em -3em #333333,
-        1.42em 1em #333333,
-        2.84em 1em #333333,
-        4.26em 0em #333333,
+		2.13em 0em #333333,
+        3.55em 0em #333333,
+        4.97em -2em #333333,
         5.68em 0em #333333,
         1.42em 4em #333333,
-        2.84em 3em #333333,
-        4.26em 2em #333333;
+        4.26em 3em #333333,
+        5.68em 3em #333333,
+        4.26em 5em #333333;
 }
 .Z {
 	box-shadow:
@@ -960,27 +820,21 @@ box-shadow:
 	box-shadow:
         0em 1.42em #808080,
         1em 1.42em #808080,
-        2em 1.42em #808080,
         1em 2.84em #808080,
         -1em 4.26em #808080,
-        -3em 5.68em #808080,
         -4em 7.1em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
 }
 .Z:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         4.26em -1em #333333,
         2.84em 1em #333333,
         1.42em 3em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
-.Ž {
+.ZH {
 	box-shadow:
 		1em -1.5em #CDCDCD,
         2em -0.5em #CDCDCD,
@@ -995,35 +849,29 @@ box-shadow:
         2em 5em #CDCDCD,
         3em 5em #CDCDCD;
 }
-.Ž:after {
+.ZH:after {
 	box-shadow:
-		2.5em -2.13em #808080,
-        4.5em -2.13em #808080,
-        2.5em -0.71em #808080,
-        0em 1.42em #808080,
-        1em 1.42em #808080,
-        2em 1.42em #808080,
-        1em 2.84em #808080,
-        -1em 4.26em #808080,
-        -3em 5.68em #808080,
-        -4em 7.1em #808080,
-        -3em 7.1em #808080,
-        -2em 7.1em #808080;
+		-0.5em 2.13em #808080,
+        1.5em 2.13em #808080,
+        -0.5em 3.53em #808080,
+        -3em 5.67em #808080,
+        -2em 5.67em #808080,
+        -2em 7.1em #808080,
+        -4em 8.51em #808080,
+        -7em 11.36em #808080,
+        -6em 11.36em #808080,
+        -5em 11.36em #808080;
 }
-.Ž:before {
+.ZH:before {
 	box-shadow:
-		1.42em -2.5em #333333,
-		2.84em -2.5em #333333,
-        4.26em -4.5em #333333,
-        1.42em 0em #333333,
-        2.84em -1em #333333,
-        4.26em -2em #333333,
-        4.26em -1em #333333,
-        2.84em 1em #333333,
-        1.42em 3em #333333,
-        1.42em 4em #333333,
-        2.84em 3em #333333,
-        4.26em 2em #333333;
+		1.42em 0.5em #333333,
+		2.84em 0.5em #333333,
+        4.26em -1.5em #333333,
+        4.26em 1em #333333,
+        4.26em 2em #333333,
+        2.84em 4em #333333,
+        1.42em 6em #333333,
+        4.26em 5em #333333;
 }
 .T {
 	box-shadow:
@@ -1038,17 +886,11 @@ box-shadow:
 .T:after {
 	box-shadow:
         0em 1.42em #808080,
-        1em 1.42em #808080,
         2em 1.42em #808080,
-        0em 2.84em #808080,
-        -1em 4.26em #808080,
-        -2em 5.68em #808080,
         -3em 7.1em #808080;
 }
 .T:before {
 	box-shadow:
-        1.42em 0em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         2.84em 0em #333333,
         2.84em 1em #333333,
@@ -1070,12 +912,6 @@ box-shadow:
 }
 .U:after {
 	box-shadow:
-        0em 1.42em #808080,
-        3em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
@@ -1091,7 +927,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .V {
@@ -1108,12 +943,8 @@ box-shadow:
 }
 .V:after {
 	box-shadow:
-        0em 1.42em #808080,
-        4em 1.42em #808080,
         -1em 2.84em #808080,
         3em 2.84em #808080,
-        -1em 4.26em #808080,
-        1em 4.26em #808080,
         -2em 5.68em #808080,
         0em 5.68em #808080,
         -2em 7.1em #808080;
@@ -1148,14 +979,6 @@ box-shadow:
 }
 .W:after {
 	box-shadow:
-        0em 1.42em #808080,
-        4em 1.42em #808080,
-        -1em 2.84em #808080,
-        1em 2.84em #808080,
-        3em 2.84em #808080,
-        -2em 4.26em #808080,
-        0em 4.26em #808080,
-        2em 4.26em #808080,
         -3em 5.68em #808080,
         -1em 5.68em #808080,
         1em 5.68em #808080,
@@ -1178,7 +1001,7 @@ box-shadow:
         2.84em 3em #333333,
         5.68em 1em #333333;
 }
-.Õ {
+.OL {
 	box-shadow:
 		1.5em -0.5em #CDCDCD,
         2.5em -0.5em #CDCDCD,
@@ -1194,28 +1017,21 @@ box-shadow:
         2em 5em #CDCDCD,
         3em 5em #CDCDCD;
 }
-.Õ:after {
+.OL:after {
 	box-shadow:
 		2em -0.71em #808080,
         3em -0.71em #808080,
         4em -0.71em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
 }
-.Õ:before {
+.OL:before {
 	box-shadow:
-		2.13em -2em #333333,
-        3.55em -3em #333333,
         4.97em -4em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
@@ -1223,10 +1039,9 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
-.Ä {
+.AD {
 	box-shadow:
 		1.5em -0.5em #CDCDCD,
         3.5em -0.5em #CDCDCD,
@@ -1243,41 +1058,31 @@ box-shadow:
         1em 5em #CDCDCD,
         4em 5em #CDCDCD;
 }
-.Ä:after {
+.AD:after {
 	box-shadow:
 		2em -0.71em #808080,
         4em -0.71em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
         -1em 4.26em #808080,
         0em 4.26em #808080,
-        1em 4.26em #808080,
-        -3em 5.68em #808080,
-        0em 5.68em #808080,
         -4em 7.1em #808080,
         -1em 7.1em #808080;
 }
-.Ä:before {
+.AD:before {
 	box-shadow:
 		2.13em -2em #333333,
         4.97em -4em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
-        1.42em 2em #333333,
-        2.84em 1em #333333,
-        4.26em 0em #333333,
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
         1.42em 4em #333333,
         5.68em 1em #333333;
 }
-.Ö {
+.OD {
 	box-shadow:
 		1.5em -0.5em #CDCDCD,
         3.5em -0.5em #CDCDCD,
@@ -1292,26 +1097,21 @@ box-shadow:
         2em 5em #CDCDCD,
         3em 5em #CDCDCD;
 }
-.Ö:after {
+.OD:after {
 	box-shadow:
 		2em -0.71em #808080,
         4em -0.71em #808080,
         1em 1.42em #808080,
         2em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
 }
-.Ö:before {
+.OD:before {
 	box-shadow:
 		2.13em -2em #333333,
         4.97em -4em #333333,
-        2.84em -1em #333333,
         4.26em -2em #333333,
         1.42em 1em #333333,
         5.68em -2em #333333,
@@ -1319,10 +1119,9 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
-.Ü {
+.UD {
 	box-shadow:
 		1.5em -0.5em #CDCDCD,
         3.5em -0.5em #CDCDCD,
@@ -1337,22 +1136,16 @@ box-shadow:
         2em 5em #CDCDCD,
         3em 5em #CDCDCD;
 }
-.Ü:after {
+.UD:after {
 	box-shadow:
 		2em -0.71em #808080,
         4em -0.71em #808080,
-        0em 1.42em #808080,
-        3em 1.42em #808080,
-        -1em 2.84em #808080,
-        2em 2.84em #808080,
-        -2em 4.26em #808080,
-        1em 4.26em #808080,
         -3em 5.68em #808080,
         0em 5.68em #808080,
         -3em 7.1em #808080,
         -2em 7.1em #808080;
 }
-.Ü:before {
+.UD:before {
 	box-shadow:
 		2.13em -2em #333333,
         4.97em -4em #333333,
@@ -1364,7 +1157,6 @@ box-shadow:
         5.68em -1em #333333,
         1.42em 3em #333333,
         5.68em 0em #333333,
-        2.84em 3em #333333,
         4.26em 2em #333333;
 }
 .X {
@@ -1395,7 +1187,6 @@ box-shadow:
 	box-shadow:
         1.42em 0em #333333,
         7.1em -4em #333333,
-        1.42em 1em #333333,
         2.84em 0em #333333,
         5.68em -2em #333333,
         4.26em 0em #333333,
@@ -1420,15 +1211,12 @@ box-shadow:
         4em 1.42em #808080,
         0em 2.84em #808080,
         2em 2.84em #808080,
-        0em 4.26em #808080,
-        -1em 5.68em #808080,
         -2em 7.1em #808080;
 }
 .Y:before {
 	box-shadow:
         1.42em 0em #333333,
         7.1em -4em #333333,
-        1.42em 1em #333333,
         2.84em 0em #333333,
         5.68em -2em #333333,
         4.26em 0em #333333,
